@@ -1,0 +1,37 @@
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">PARCIAL</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navbar-header">
+        <li><a ui-sref="inicio">Inicio</a></li>
+        <li><a ui-sref="login">Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container" ui-view></div>
+<div style="align:center"><h3 style="color: white">LOGIN DEL USUARIO</h3>
+    <form id="FormIngreso" name="FormIngreso"  enctype="multipart/form-data" style="width: 400px">
+        <div>
+            <input type="email" placeholder="ingrese mail" ng-model="usuario.mail" required><br>
+            <input type="text"  placeholder="ingrese usuario" ng-model="usuario.nombre" required><br>
+            <input type="password"  placeholder="ingrese clave" ng-model="usuario.clave" required><br>
+
+            <input type="button" value="Login" ng-Click="Login()" ng-disabled="FormIngreso.$invalid">
+            <input type="button" value="Administrador" ng-Click="Carga('Administrador')" >
+            <input type="button" value="Comprador" ng-Click="Carga('Comprador')" >
+            <input type="button" value="Vendedor" ng-Click="Carga('Vendedor')" >
+        </div>
+    </form>
+</div>
